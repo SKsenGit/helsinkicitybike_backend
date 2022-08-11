@@ -1,0 +1,24 @@
+{
+  "name": "helsinkicitybike_backend",
+  "version": "1.0.0",
+  "description": "The implementation of pre-assignment for Solita Dev Academy Finland fall 2022.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SKsenGit/helsinkicitybike_backend.git"
+  },
+  "keywords": [],
+  "author": "Kseniia Säkki",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SKsenGit/helsinkicitybike_backend/issues"
+  },
+  "homepage": "https://github.com/SKsenGit/helsinkicitybike_backend#readme",
+  "dependencies": {
+    "express": "^4.18.1",
+    "pg": "^8.7.3"
+  }
+}
