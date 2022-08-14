@@ -2,7 +2,7 @@
   "name": "helsinkicitybike_backend",
   "version": "1.0.0",
   "description": "The implementation of pre-assignment for Solita Dev Academy Finland fall 2022.",
-  "main": "index.js",
+  "main": "/build/index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
