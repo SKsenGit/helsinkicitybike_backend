@@ -58,10 +58,11 @@ const createStation = (request, response) => {
                 + stations[i][11] + ")"
         }
         queryValuesText += "; Select setval('stations_id_seq'," + maxId + ",true) "
-
+        
         PGPool.query(queryValuesText, (error, results) => {
             if (error) {
-                response.status(400).send(error)
+                response.status(400).send({"error":error,
+            "queryText": queryValuesText})
             }
 
             response.status(201).send({ "rowCount": results[0].rowCount })
