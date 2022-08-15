@@ -1,0 +1,32 @@
+DROP TABLE IF EXISTS journeys;
+DROP TABLE IF EXISTS stations;
+
+CREATE TABLE stations(
+	id serial NOT NULL  PRIMARY KEY,
+	nimi VARCHAR ( 50 ) NOT NULL,
+	namn VARCHAR ( 50 ),
+	name VARCHAR ( 50 ),
+	osoite VARCHAR ( 50 ) NOT NULL,
+	adress VARCHAR ( 50 ),
+	kaupunki VARCHAR ( 15 ),
+	stad VARCHAR ( 15 ),
+	operaattor VARCHAR ( 50 ),
+	kapasiteet integer,
+	x double precision NOT NULL,
+	y double precision NOT NULL
+);
+
+CREATE TABLE journeys(
+	departure TIMESTAMP,
+	return TIMESTAMP,
+	departure_station_id integer,
+	return_station_id integer,
+	distance integer,
+	duration integer,
+	CONSTRAINT fk_departure_station
+      	FOREIGN KEY(departure_station_id) 
+	 	REFERENCES stations(id),
+	CONSTRAINT fk_return_station
+		FOREIGN KEY(return_station_id) 
+	  	REFERENCES stations(id)
+);
